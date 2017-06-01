@@ -25,6 +25,7 @@ class ExperimentsController < ApplicationController
   def show
     unauthorized
     @experiment = Experiment.find(params[:id])
+    @procedures = @experiment.procedures.order(step: :asc)
   end
 
   def edit
