@@ -26,6 +26,7 @@ class ExperimentsController < ApplicationController
   def show
     unauthorized
     @experiment = Experiment.find_by(id:params[:id])
+    @procedures = @experiment.procedures.order(step: :asc)
     @experiment_proposal = ExperimentProposal.find_by(id: params[:experiment_proposal_id])
     redirect_to "/experiment_proposals" unless @experiment && @experiment_proposal
   end
