@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :experiments#, foreign_key: "Experimenter"
-  has_many :experiment_proposals#, foreign_key: "Proposer"
+  has_many :experiments
+  has_many :experiment_proposals
   has_many :observations
   has_many :comments
 
