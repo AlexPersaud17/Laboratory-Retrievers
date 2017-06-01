@@ -3,6 +3,13 @@ class ProceduresController < ApplicationController
     unauthorized
     @experiment = Experiment.find_by(id: params[:experiment_id])
     @procedure = Procedure.new
+    @used_steps = []
+    @unused_steps = (1..10).to_a
+    @experiment.procedures.each do |p|
+      @used_steps << p.step
+    end
+    @unused_steps -= @used_steps
+
   end
 
   def create

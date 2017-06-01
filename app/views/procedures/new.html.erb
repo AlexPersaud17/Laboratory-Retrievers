@@ -11,7 +11,7 @@
 <%= form_for [@experiment, @procedure], :url => "/experiments/#{@experiment.id}/procedures" do |f| %>
   <div>
     <%= f.label :step %>
-    <%= f.select :step, (@experiment.procedures.count+1..100) %>
+    <%= f.select :step, (unused_steps) %>
   </div>
   <div>
     <%= f.label :body %>
@@ -24,4 +24,3 @@
     <%= f.submit %>
   </div>
 <% end %>
-

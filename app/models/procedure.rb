@@ -3,5 +3,5 @@ class Procedure < ApplicationRecord
   validates :body, presence: true
 
   belongs_to :experiment
-  has_many :observations, as: :observable
+  has_many :observations, as: :observablez
 end

@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <div class="container">
     <nav>
       <% if current_user %>
         <a class="nav-item" href="/experiment_proposals">Home</a>
@@ -22,7 +23,6 @@
       <% end %>
     </nav>
 
-    <div class="container">
       <%= yield %>
     </div>
 
