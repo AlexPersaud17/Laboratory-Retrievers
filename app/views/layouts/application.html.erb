@@ -7,16 +7,18 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
     <div class="container">
-    <nav>
+    <nav id="nav-bar">
+        <p id="logo">LABORATORY RETRIEVERS</p>
       <% if current_user %>
-        <a class="nav-item" href="/experiment_proposals">Home</a>
-        <a class="nav-item" href="/users/<%=current_user.id%>"><%=current_user.username%></a>
         <a class="nav-item" href="/users/logout">Logout</a>
+        <a class="nav-item" href="/users/<%=current_user.id%>"><%=current_user.username%></a>
+        <a class="nav-item" href="/experiment_proposals">Home</a>
       <% else %>
         <a class="nav-item" href="/users/login">Login</a>
         <a class="nav-item" href="/users/new">Register</a>
