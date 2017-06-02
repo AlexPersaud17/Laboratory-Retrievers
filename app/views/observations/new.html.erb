@@ -2,13 +2,10 @@
 
 
 <%= form_for [@experiment, @observation], url: "/experiment_proposals/#{@experiment_proposal.id}/experiments/#{@experiment.id}/observations" do |f| %>
-  <p>
-    <%= f.label :body %>
-    <%= f.text_area :body, cols: 100, rows: 10  %>
-  </p>
+  <p><%= f.label :body %></p>
+  <p><%= f.text_area :body, cols: 100, rows: 10  %></p>
   <p>
     <%= f.submit "Make an Observation" %>
   </p>
 
 <%end%>
-

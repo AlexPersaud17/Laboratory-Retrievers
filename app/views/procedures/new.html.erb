@@ -10,12 +10,12 @@
 
 <%= form_for [@experiment, @procedure], :url => "/experiments/#{@experiment.id}/procedures" do |f| %>
   <div>
-    <%= f.label :step %>
-    <%= f.select :step, (unused_steps) %>
+    <p><%= f.label :step %></p>
+    <p><%= f.select :step, (@unused_steps) %></p>
   </div>
   <div>
-    <%= f.label :body %>
-    <%= f.text_area :body, size: 100 %>
+    <p><%= f.label :body %></p>
+    <p><%= f.text_area :body, cols: 100, rows: 3 %></p>
   </div>
   <div>
     <%= f.hidden_field :experiment_id, :value => @experiment.id %>
