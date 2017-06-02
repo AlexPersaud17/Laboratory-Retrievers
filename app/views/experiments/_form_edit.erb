@@ -1,24 +1,24 @@
 <div class="form">
   <%= form_for [@experiment_proposal, @experiment] do |f| %>
     <div>
-      <%= f.label :title %>
-      <%= f.text_field :title, size: 100 %>
+      <p><%= f.label :title %></p>
+      <p><%= f.text_field :title, size: 100 %></p>
     </div>
     <div>
-      <%= f.label :results %>
-      <%= f.text_area :result, cols: 100, rows: 10 %>
+      <p><%= f.label :results %></p>
+      <p><%= f.text_area :result, cols: 100, rows: 10 %></p>
     </div>
     <div>
-      <%= f.label :conclusion %>
-      <%= f.text_area :conclusion, cols: 100, rows: 10 %>
+      <p><%= f.label :conclusion %></p>
+      <p><%= f.text_area :conclusion, cols: 100, rows: 10 %></p>
     </div>
     <div>
-      <%= f.label :status %>
-      <%= f.select(:status, ['Open', 'In Progress', 'Closed'], {})%>
+      <p><%= f.label :status %></p>
+      <p><%= f.select(:status, ['Open', 'In Progress', 'Closed'], {})%></p>
     </div>
     <div>
-      <%= f.hidden_field :experiment_proposal_id, :value => @experiment_proposal.id %>
-      <%= f.submit %>
+      <p><%= f.hidden_field :experiment_proposal_id, :value => @experiment_proposal.id %></p>
+      <p><%= f.submit %></p>
     </div>
   <% end %>
 </div>
